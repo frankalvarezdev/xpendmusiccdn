@@ -1,0 +1,43 @@
+const metadataParser = require('markdown-yaml-metadata-parser');
+const fs = require('fs');
+var converter = require('html-to-markdown');
+
+const folder = './artists/';
+
+
+const files = fs.readdirSync(folder);
+
+files.forEach(file => {
+    let rawdata = fs.readFileSync(folder + file);
+    release = JSON.parse(rawdata);
+    var services = null;
+    var n = 0;
+    release.social_networks.forEach(service => {
+        if (n == 0) {
+            services =
+                `-
+        name: ${service.name}
+        url: ${service.url}`;
+        } else {
+            services = services +
+                `
+    -
+        name: ${service.name}
+        url: ${service.url}`;
+        }
+        n++
+    })
+    var markdown = converter.convert(release.biografia);
+    var data =
+        `---
+name: ${release.name}
+country: ${release.country}
+social_networks: 
+    ${services}
+---
+${markdown}`;
+    fs.writeFile(`art/${file.split(".")[0]}.md`, data, function (err) {
+        if (err) throw err;
+        console.log('File is created successfully.');
+    });
+});

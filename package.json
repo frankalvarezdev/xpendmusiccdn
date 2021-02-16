@@ -1,0 +1,16 @@
+{
+  "name": "xpendmusic-cdn",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "markdown-it": "^12.0.4",
+    "markdown-yaml-metadata-parser": "^3.0.0"
+  }
+}

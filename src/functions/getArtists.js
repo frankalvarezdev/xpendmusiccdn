@@ -2,7 +2,7 @@ const getDataFolder = require('./getDataFolder');
 const searchArtistReleases = require('./searchArtistReleases')
 
 module.exports = function () {
-    const artists = getDataFolder('data/artists/', true);
+    const artists = getDataFolder('./data/artists/', true);
     var finalArtists = [];
 
     artists.forEach(artista => {
@@ -10,5 +10,5 @@ module.exports = function () {
         finalArtists.push(artist);
     });
     
-    return finalArtists
+    return finalArtists.reverse();
 };

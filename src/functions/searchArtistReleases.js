@@ -1,9 +1,8 @@
-const getDataFolder = require('./getDataFolder')
 var releases = require('./getReleases');
 var MarkdownIt = require('markdown-it');
 releases = releases();
 var md = new MarkdownIt();
-var cdn = "https://cdn.xpendmusic.com"
+var cdn = "https://cdn-v2.xpendmusic.com"
 
 module.exports = artista => {
     
@@ -19,7 +18,7 @@ module.exports = artista => {
 
     artist.biografia = md.render(artista.content);
     artist.releases = artistReleases;
-    artist.image = `${cdn}/media/img/artist/${artist.id}.jpg`;
+    artist.image = `${cdn}/media/img/${artist.id}.jpg`;
     artist.key = `/artistas/${artist.id}`;
     artist.url = `https://xpendmusic.com/artistas/${artist.id}`;
 

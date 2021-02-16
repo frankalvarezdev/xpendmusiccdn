@@ -4,9 +4,13 @@ const findReleaseArtists = require('./findReleaseArtists');
 const idFile = require('./idFile');
 
 module.exports = id_data => {
-    var id = idFile(id_data, "data/releases/");
+    var id = idFile(id_data, "./data/releases/");
 
-    let release = fs.readFileSync('data/releases/' + id, 'utf-8');
+    if (id == id_data) {
+        return "error"
+    }
+    
+    let release = fs.readFileSync('./data/releases/' + id, 'utf-8');
     release = metadataParser(release);
 
     let date = id.split("-");

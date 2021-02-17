@@ -18,7 +18,7 @@ module.exports = artista => {
 
     artist.biografia = md.render(artista.content);
     artist.releases = artistReleases;
-    artist.image = `${cdn}/media/${artist.id}.jpg`;
+    artist.image = `${cdn}/media/${artist.img}`;
     artist.key = `/artistas/${artist.id}`;
     artist.url = `https://xpendmusic.com/artistas/${artist.id}`;
 

@@ -11,5 +11,6 @@ social_networks:
     -
         name: spotify
         url: https://open.spotify.com/artist/3HYAzHQo1FCTOxJcldzZXI
+img: anibaltercero.jpg
 ---
 Productor de música electronica.

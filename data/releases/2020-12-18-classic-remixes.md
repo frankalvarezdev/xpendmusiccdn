@@ -21,4 +21,5 @@ services:
     -
         name: amazon
         url: https://music.amazon.com/albums/B08PPYK9MM
+img: classic-remixes.jpg
 ---

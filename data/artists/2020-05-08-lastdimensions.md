@@ -14,5 +14,6 @@ social_networks:
     -
         name: spotify
         url: https://open.spotify.com/artist/6dbNKzOSdQJBlfvEm79a27
+img: lastdimensions.jpg
 ---
-David Perdomo mas conocido como ** Last Dimensions **, es un productor de música enfocado en el genero del Melodic DubstepDavid lleva la música ya desde hace tiempo, pero comenzó su carrera como productor en el año 2020 a sus 17 años, experimentando con géneros como el Progresive House.Su primer sencillo lleva como nombre ** Astro ** y fue lanzado en marzo del 2020.
+David Perdomo mas conocido como **Last Dimensions**, es un productor de música enfocado en el genero del Melodic DubstepDavid lleva la música ya desde hace tiempo, pero comenzó su carrera como productor en el año 2020 a sus 17 años, experimentando con géneros como el Progresive House.Su primer sencillo lleva como nombre **Astro** y fue lanzado en marzo del 2020.

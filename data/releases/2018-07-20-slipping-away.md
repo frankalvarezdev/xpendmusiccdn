@@ -15,4 +15,5 @@ services:
     -
         name: youtube
         url: https://youtu.be/HaQ3Psdio5w
+img: slipping-away.jpg
 ---

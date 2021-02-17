@@ -9,17 +9,17 @@ sections:
   label: Artistas
   create: documents
   match: "**/*"
-  new_doc_ext: ".md"
+  new_doc_ext: md
 - type: directory
   path: data/releases
   label: Lanzamientos
   create: documents
   match: "**/*"
   new_doc_ext: md
-upload_dir: uploads
-public_path: "/uploads"
+upload_dir: src/static/media
+public_path: ''
 front_matter_path: ''
-use_front_matter_path: false
+use_front_matter_path: 
 file_template: ":filename:"
 build:
   install_dependencies_command: npm install

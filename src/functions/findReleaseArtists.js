@@ -26,7 +26,7 @@ module.exports = release => {
 
         release.artists.push(theArtist);
     });
-    release.image = `${cdn}/media/img/${release.id}.jpg`;
+    release.image = `${cdn}/media/${release.id}.jpg`;
     
     return release;
 }

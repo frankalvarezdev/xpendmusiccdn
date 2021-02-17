@@ -1,6 +1,7 @@
 var releases = require('./src/functions/getReleases');
 var artists = require('./src/functions/getArtists');
 const fs = require('fs');
+const fse = require('fs-extra');
 
 releases = releases();
 artists = artists();
@@ -32,16 +33,26 @@ const generateFiles = (array, folder) => {
 
 fs.writeFile("dist/a_data.json", a_data, function (err) {
     if (err) throw err;
-    console.log('Se genero los datos generales.');
+    console.log('- Successfully generated releases data');
 });
 
 fs.writeFile("dist/r_data.json", r_data, function (err) {
     if (err) throw err;
-    console.log('Se genero los datos generales.');
+    console.log('- Successfully generated artists data');
 });
 
 generateFiles(releases, "release");
 generateFiles(artists, "artist");
+
+const srcDir = `src/static`;
+const destDir = `dist`;
+
+try {
+    fse.copySync(srcDir, destDir)
+    console.log('- Static files were generated')
+} catch (err) {
+    console.error(err)
+}
 
 var html = `<html><head>
 <meta http-equiv="content-type" content="text/html;charset=utf-8">
@@ -51,5 +62,9 @@ var html = `<html><head>
 
 fs.writeFile("dist/index.html", html, function (err) {
     if (err) throw err;
-    console.log('FINALIZADO!!!');
+});
+
+fs.writeFile("dist/404.html", html, function (err) {
+    if (err) throw err;
+    console.log('THE PROCESS WAS SUCCESSFULLY COMPLETED :D!');
 });

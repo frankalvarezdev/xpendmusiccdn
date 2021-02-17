@@ -4,9 +4,9 @@ module.exports = (req, res) => {
     if (req.method === 'GET') {
         var url = null;
         if (req.query.d == "releases") {
-            url = "https://xpendmusiccdn.frankalvarez.vercel.app/r_data.json";
+            url = "https://cdn-v2.xpendmusic.com/r_data.json";
         } else if (req.query.d == "artists") {
-            url = "https://xpendmusiccdn.frankalvarez.vercel.app/a_data.json";
+            url = "https://cdn-v2.xpendmusic.com/a_data.json";
         }
         fetch(url)
             .then(res => res.json())

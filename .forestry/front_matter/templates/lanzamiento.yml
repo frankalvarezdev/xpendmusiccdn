@@ -5,13 +5,15 @@ fields:
 - name: title
   type: text
   config:
-    required: false
+    required: true
     min: 12
   label: title
   default: 2021-01-01-name
 - type: text
   name: name
   label: Nombre del lanzamiento
+  config:
+    required: true
 - type: field_group_list
   name: artists
   label: Artistas
@@ -22,9 +24,22 @@ fields:
   config:
     min: 1
     labelField: id
-- type: text
-  name: type
-  label: type
+  description: Si el artista es nuevo primero debes agregarlo
+- name: type
+  type: select
+  default: single
+  config:
+    required: true
+    options:
+    - single
+    - album
+    - ep
+    source:
+      type: simple
+      section: 
+      file: 
+      path: 
+  label: Categoria
 - type: text
   name: url
   label: URL
@@ -39,21 +54,10 @@ fields:
     label: url
   label: Plataformas
   description: Platataformas/tiendas donde esta disponible el lanzamiento
+  config:
+    min: 1
 - type: file
   name: img
   label: Portada
-- name: tipo
-  type: select
-  default: []
   config:
-    required: false
-    options:
-    - single
-    - album
-    - ep
-    source:
-      type: simple
-      section: 
-      file: 
-      path: 
-  label: Tipo
+    maxSize: 2

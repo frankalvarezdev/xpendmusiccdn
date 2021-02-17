@@ -1,0 +1,33 @@
+---
+label: Lanzamiento
+hide_body: true
+fields:
+- type: text
+  name: name
+  label: name
+- type: field_group_list
+  name: artists
+  label: artists
+  fields:
+  - type: text
+    name: id
+    label: id
+- type: text
+  name: type
+  label: type
+- type: text
+  name: url
+  label: url
+- type: field_group_list
+  name: services
+  label: services
+  fields:
+  - type: text
+    name: name
+    label: name
+  - type: text
+    name: url
+    label: url
+- type: file
+  name: img
+  label: img

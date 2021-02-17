@@ -21,6 +21,8 @@ fields:
   - type: text
     name: id
     label: id
+    config:
+      required: true
   config:
     min: 1
     labelField: id
@@ -43,15 +45,21 @@ fields:
 - type: text
   name: url
   label: URL
+  config:
+    required: true
 - type: field_group_list
   name: services
   fields:
   - type: text
     name: name
     label: name
+    config:
+      required: true
   - type: text
     name: url
     label: url
+    config:
+      required: true
   label: Plataformas
   description: Platataformas/tiendas donde esta disponible el lanzamiento
   config:

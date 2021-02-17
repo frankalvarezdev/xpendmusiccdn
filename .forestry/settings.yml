@@ -1,0 +1,29 @@
+---
+new_page_extension: md
+auto_deploy: false
+admin_path: dist
+webhook_url: 
+sections:
+- type: directory
+  path: data/artists
+  label: Artistas
+  create: documents
+  match: "**/*"
+  new_doc_ext: md
+- type: directory
+  path: data/releases
+  label: Lanzamientos
+  create: documents
+  match: "**/*"
+  new_doc_ext: md
+upload_dir: src/static/media
+public_path: ''
+front_matter_path: ''
+use_front_matter_path: 
+file_template: ":filename:"
+build:
+  install_dependencies_command: npm install
+  preview_docker_image: forestryio/node:12
+  mount_path: "/srv"
+  working_dir: "/srv"
+  instant_preview_command: npm run develop

@@ -2,25 +2,34 @@
 label: Lanzamiento
 hide_body: true
 fields:
+- name: title
+  type: text
+  config:
+    required: false
+    min: 12
+  label: title
+  default: 2021-01-01-name
 - type: text
   name: name
-  label: name
+  label: Nombre del lanzamiento
 - type: field_group_list
   name: artists
-  label: artists
+  label: Artistas
   fields:
   - type: text
     name: id
     label: id
+  config:
+    min: 1
+    labelField: id
 - type: text
   name: type
   label: type
 - type: text
   name: url
-  label: url
+  label: URL
 - type: field_group_list
   name: services
-  label: services
   fields:
   - type: text
     name: name
@@ -28,6 +37,23 @@ fields:
   - type: text
     name: url
     label: url
+  label: Plataformas
+  description: Platataformas/tiendas donde esta disponible el lanzamiento
 - type: file
   name: img
-  label: img
+  label: Portada
+- name: tipo
+  type: select
+  default: []
+  config:
+    required: false
+    options:
+    - single
+    - album
+    - ep
+    source:
+      type: simple
+      section: 
+      file: 
+      path: 
+  label: Tipo

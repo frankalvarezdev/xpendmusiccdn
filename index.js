@@ -1,5 +1,6 @@
 var releases = require('./src/functions/getReleases');
 var artists = require('./src/functions/getArtists');
+var cloud = require('./src/functions//cloud');
 const fs = require('fs');
 const fse = require('fs-extra');
 
@@ -66,5 +67,6 @@ fs.writeFile("dist/index.html", html, function (err) {
 
 fs.writeFile("dist/404.html", html, function (err) {
     if (err) throw err;
-    console.log('THE PROCESS WAS SUCCESSFULLY COMPLETED :D!');
 });
+
+cloud(releases, artists);

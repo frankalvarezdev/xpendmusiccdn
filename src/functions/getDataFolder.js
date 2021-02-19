@@ -9,7 +9,7 @@ module.exports = (folder, content = false) => {
             result = metadataParser(rawdata),
             id = file.slice(11).split(".")[0],
             date = file.split("-");
-        date = { date: date[2] + "-" + date[1] + "-" + date[0] }
+        date = { date: date[0] + "-" + date[1] + "-" + date[2] }
         result.metadata = { ...{ id: id }, ...result.metadata, ...date};
         if (content) {
             data.push(result);

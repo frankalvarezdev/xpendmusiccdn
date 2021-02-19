@@ -15,5 +15,5 @@ services:
     -
         name: youtube
         url: https://youtu.be/RIXcsMNLiYI
-img: just-a-memory.jpg
+img: /just-a-memory.jpg
 ---

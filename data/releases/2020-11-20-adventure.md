@@ -14,5 +14,5 @@ services:
     -
         name: youtube
         url: https://youtu.be/czL0J7IA028
-img: adventure.jpg
+img: /adventure.jpg
 ---

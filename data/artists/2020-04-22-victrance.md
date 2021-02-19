@@ -14,6 +14,6 @@ social_networks:
     -
         name: spotify
         url: https://open.spotify.com/artist/041hTTg0xCe0OWtwIGqLIo
-img: victrance.jpg
+img: /victrance.jpg
 ---
 Victor Parra, mas conocido como **VicTrance**, es un productor de nacionalidad Mexicana.Inicio su carrera desde los 12 años experimentando con un gran variedad de géneros. Actualmente se dedica a producir *Melodic Dubstep, Future Bass, Chill Music, Ambient Music y Lofi Hiphop.*

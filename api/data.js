@@ -1,27 +1,45 @@
-const fetch = require('node-fetch');
+require('dotenv').config();
+var firebase = require('firebase/app');
+require('firebase/database');
+
+var app = firebase.initializeApp({
+    apiKey: process.env.FBKY,
+    authDomain: "xpend-music-data.firebaseapp.com",
+    databaseURL: "https://xpend-music-data-default-rtdb.firebaseio.com",
+    projectId: "xpend-music-data",
+    storageBucket: "xpend-music-data.appspot.com",
+    messagingSenderId: "1080830841175",
+    appId: "1:1080830841175:web:9ad0785e66004441802e12",
+    measurementId: "G-BM89G596VH"
+});
 
 module.exports = (req, res) => {
     if (req.method === 'GET') {
-        var url = null;
+        var dt = null;
         if (req.query.d == "releases") {
-            url = "https://cdn-v2.xpendmusic.com/r_data.json";
+            dt = "/releases/";
         } else if (req.query.d == "artists") {
-            url = "https://cdn-v2.xpendmusic.com/a_data.json";
+            dt = "/artists/";
         }
-        fetch(url)
-            .then(res => res.json())
-            .then(data => {
-                if (req.query.max_results && !req.query.slice && !req.query.id) {
-                    data = data.slice(0, req.query.max_results);
-                } else if (req.query.slice && !req.query.max_results && !req.query.id) {
-                    let n = req.query.slice.split("-");
-                    if (n[1] != undefined) {
-                        data = data.slice(parseInt(n[0]), parseInt(n[1]))
-                    } else {
-                        data = data.slice(parseInt(n[0]))
-                    }
-                }
-                res.json(data);
+
+        if (req.query.max_results) {
+            firebase.database().ref(dt).limitToFirst(parseInt(req.query.max_results)).once('value', (snapshot) => {
+                var arr = [];
+                snapshot.forEach((childSnapshot) => {
+                    arr.push(childSnapshot.val());
+                });
+
+                res.json(arr);
             });
+        } else {
+            firebase.database().ref(dt).once('value', (snapshot) => {
+                var arr = [];
+                snapshot.forEach((childSnapshot) => {
+                    arr.push(childSnapshot.val());
+                });
+
+                res.json(arr);
+            });
+        }
     }
 }

@@ -15,5 +15,5 @@ services:
     -
         name: youtube
         url: https://youtu.be/hdF_rTve5v8
-img: lost-in-your-eyes.jpg
+img: /lost-in-your-eyes.jpg
 ---

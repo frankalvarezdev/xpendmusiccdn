@@ -14,6 +14,6 @@ social_networks:
     -
         name: spotify
         url: https://open.spotify.com/artist/2OnLNlFksqMjhDm4sChD9k
-img: frankalvarez.jpg
+img: /frankalvarez.jpg
 ---
 **Frank Alvarez** es un Productor de nacionalidad Peruana. enfocado en el genero Future Bass.Inicio su carrera a los 15 años empezando a mezclar música y tiempo después comenzó a producir diferentes subgéneros de la música electrónica. Su primer lanzamiento oficial, fue <a href='https://www.youtube.com/watch?v=rJeA6SlQDAs' target='_blank'>**Distorcion**</a> un sencillo dentro del Progresive House.

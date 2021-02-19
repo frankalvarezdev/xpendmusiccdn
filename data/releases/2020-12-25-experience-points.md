@@ -21,5 +21,5 @@ services:
     -
         name: amazon
         url: https://music.amazon.com/artists/B07WSSH38J/zeckrom-xenial
-img: experience-points.jpg
+img: /experience-points.jpg
 ---

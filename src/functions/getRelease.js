@@ -14,7 +14,7 @@ module.exports = id_data => {
     release = metadataParser(release);
 
     let date = id.split("-");
-    date = { date: date[2] + "-" + date[1] + "-" + date[0] };
+    date = { date: date[0] + "-" + date[1] + "-" + date[2] };
     release.metadata = { ...{ id: id_data }, ...release.metadata, ...date }
 
     release = findReleaseArtists(release.metadata);

@@ -15,5 +15,5 @@ services:
     -
         name: youtube
         url: https://youtu.be/iowTTJJ-x5E
-img: smile-hidden.jpg
+img: /smile-hidden.jpg
 ---

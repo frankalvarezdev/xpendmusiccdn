@@ -15,5 +15,5 @@ services:
     -
         name: youtube
         url: https://youtu.be/X31-QERJSxA
-img: never-look-back.jpg
+img: /never-look-back.jpg
 ---

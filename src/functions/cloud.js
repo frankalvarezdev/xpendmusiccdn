@@ -1,8 +1,9 @@
+require('dotenv').config();
 var firebase = require('firebase/app');
 require('firebase/database');
 
 var app = firebase.initializeApp({
-    apiKey: "AIzaSyDBNZZPmc1QPfZ5sDsWwkCp7mObQ0nwW9o",
+    apiKey: process.env.FBKY,
     authDomain: "xpend-music-data.firebaseapp.com",
     databaseURL: "https://xpend-music-data-default-rtdb.firebaseio.com",
     projectId: "xpend-music-data",
@@ -23,13 +24,25 @@ module.exports = (releases, artists) => {
             }
         }
     }
+
+    database('artists', {});
+    database('releases', {});
+
     var ln = releases.length;
     var n = 0;
+
+    var r = 10;
+    var a = 10;
+
+    // var abc = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+
     artists.forEach(data => {
-        database('artists/' + data.id, data);
+        database('artists/' + a + "-" + data.id, data);
+        a++;
     });
 
     releases.forEach(data => {
-        database('releases/' + data.id, data, true);
+        database('releases/' + r + "-" + data.id, data, true);
+        r++;
     });
 }

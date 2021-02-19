@@ -23,5 +23,5 @@ services:
     -
         name: amazon
         url: https://music.amazon.com/albums/B08RLPB3FQ
-img: chocolate-latte.jpg
+img: /chocolate-latte.jpg
 ---

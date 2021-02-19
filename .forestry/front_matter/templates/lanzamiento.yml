@@ -69,5 +69,3 @@ fields:
   label: Portada
   config:
     maxSize: 2
-pages:
-- data/releases/2021-02-16-prueba.md

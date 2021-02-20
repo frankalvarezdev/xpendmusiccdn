@@ -1,9 +1,11 @@
 const getDataFolder = require('./getDataFolder');
+var fs = require('fs');
 
 module.exports = release => {
+
     const artists = getDataFolder('./data/artists/', true);
     const cdn = "https://cdn-v2.xpendmusic.com"
-    
+
     var a = release.artists;
     release.artists = [];
 
@@ -26,7 +28,9 @@ module.exports = release => {
 
         release.artists.push(theArtist);
     });
+
     release.image = `${cdn}/media${release.img}`;
-    
+    release.image_datauri = `${cdn}/media/placeholder${release.img}`;
+
     return release;
 }

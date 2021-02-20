@@ -3,16 +3,29 @@ var artists = require('./src/functions/getArtists');
 var cloud = require('./src/functions//cloud');
 const fs = require('fs');
 const fse = require('fs-extra');
+const createImgPlaceholder = require('./createImgPlaceholder')
+
+if (!fs.existsSync('dist')) {
+    fs.mkdirSync('dist');
+}
+
+const srcDir = `src/static`;
+const destDir = `dist`;
+
+try {
+    fse.copySync(srcDir, destDir)
+    console.log('- Static files were generated')
+} catch (err) {
+    console.error(err)
+}
+
+createImgPlaceholder();
 
 releases = releases();
 artists = artists();
 
 var a_data = JSON.stringify(artists);
 var r_data = JSON.stringify(releases);
-
-if (!fs.existsSync('dist')) {
-    fs.mkdirSync('dist');
-}
 
 const generateFiles = (array, folder) => {
     if (!fs.existsSync(`dist/${folder}`)) {
@@ -44,16 +57,6 @@ fs.writeFile("dist/r_data.json", r_data, function (err) {
 
 generateFiles(releases, "release");
 generateFiles(artists, "artist");
-
-const srcDir = `src/static`;
-const destDir = `dist`;
-
-try {
-    fse.copySync(srcDir, destDir)
-    console.log('- Static files were generated')
-} catch (err) {
-    console.error(err)
-}
 
 var html = `<html><head>
 <meta http-equiv="content-type" content="text/html;charset=utf-8">

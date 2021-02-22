@@ -31,6 +31,7 @@ module.exports = release => {
 
     release.image = `${cdn}/media${release.img}`;
     release.image_datauri = `${cdn}/media/placeholder${release.img}`;
+    delete release.img;
 
     return release;
 }

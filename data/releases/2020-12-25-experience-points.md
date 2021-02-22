@@ -4,7 +4,7 @@ artists:
     - 
         id: zeckromxenial
 type: ep
-url: https://open.spotify.com/album/3KcvEETlGXTyibCXG8Sv7G
+url: https://go.xpend.co/rN6u
 services: 
     -
         name: spotify

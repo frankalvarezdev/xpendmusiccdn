@@ -20,7 +20,9 @@ module.exports = (releases, artists) => {
             n++;
             if (n == ln) {
                 console.log('THE PROCESS WAS SUCCESSFULLY COMPLETED :D!');
-                process.exit();
+                setTimeout(function () {
+                    process.exit();
+                }, 1200);
             }
         }
     }

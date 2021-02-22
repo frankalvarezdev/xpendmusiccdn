@@ -22,6 +22,7 @@ module.exports = artista => {
     artist.image_datauri = `${cdn}/media/placeholder${artist.img}`;
     artist.key = `/artistas/${artist.id}`;
     artist.url = `https://xpendmusic.com/artistas/${artist.id}`;
+    delete artist.img;
 
     return artist;
 }

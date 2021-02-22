@@ -13,6 +13,6 @@ social_networks:
 img: "/frankalvarez.jpg"
 
 ---
-\**Frank Alvarez** es un Productor de nacionalidad Peruana. enfocado en el genero Future Bass.
+**Frank Alvarez** es un Productor de nacionalidad Peruana. enfocado en el genero Future Bass.
 
-Inicio su carrera a los 15 años empezando a mezclar música y tiempo después comenzó a producir diferentes subgéneros de la música electrónica. Su primer lanzamiento oficial, fue **\[Distorcion\]([https://www.youtube.com/watch?v=rJeA6SlQDAs](https://www.youtube.com/watch?v=rJeA6SlQDAs "https://www.youtube.com/watch?v=rJeA6SlQDAs"))**  un sencillo dentro del Progresive House.
+Inicio su carrera a los 15 años empezando a mezclar música y tiempo después comenzó a producir diferentes subgéneros de la música electrónica. Su primer lanzamiento oficial, fue **[Distorcion](https://www.youtube.com/watch?v=rJeA6SlQDAs)**  un sencillo dentro del Progresive House.
